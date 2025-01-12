@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 // import './index.css'
 import './style/index.css'
+import './style/global.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
