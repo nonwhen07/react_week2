@@ -59,6 +59,18 @@ const App = () => {
     });
   };
 
+  const checkLogin = () => {
+    axios.post(`${baseURL}/v2/api/user/check`)
+    .then(() => {
+      alert('使用者已登入');
+    })
+    .catch(() => {
+      // console.error(err);
+      // alert('使用者未登入');
+      setIsAuth(false);
+    });
+  };
+
   return (
     // <Router>
     //   <Routes>
@@ -72,6 +84,7 @@ const App = () => {
         <div className="container py-5">
           <div className="row">
             <div className="col-6">
+              <button className="btn btn-success mb-3" type="button" onClick={checkLogin}>確認使用者登入</button>
               <h2>產品列表</h2>
               <table className="table">
                 <thead>
